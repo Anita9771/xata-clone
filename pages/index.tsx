@@ -5,6 +5,7 @@ import homePageStyles from "../styles/homepage.module.css";
 import { TestForm } from "../components/TestForm";
 import dotenv from "dotenv"
 // dotenv.config();
+// const fs = require('fs')
 
 export default function IndexPage({
   links,
@@ -113,10 +114,11 @@ export default function IndexPage({
 console.log(process.env.XATA_API_KEY)
 
 
-const xata = new XataClient({apiKey: process.env.XATA_API_KEY});
+
 
 export const getServerSideProps = async () => {
   // const xata = await getXataClient();
+  const xata = new XataClient({apiKey: process.env.XATA_API_KEY});
   const links = await xata.db.clients.getAll();
   const results = await fetch(
     `https://api.cloudinary.com/v1_1/${process.env.CLOUDINARY_CLOUD_NAME}/resources/image`,

@@ -4,9 +4,10 @@ import dotenv from "dotenv"
 // dotenv.config();
 
 
-const xata = new XataClient({apiKey: process.env.XATA_API_KEY});
+
 
 const handler: NextApiHandler = async (req, res) => {
+  const xata = new XataClient({apiKey: process.env.XATA_API_KEY});
   const { name, email, reason } = req.body;
   await xata.db.viewers.create({
     name,

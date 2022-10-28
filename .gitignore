@@ -46,6 +46,7 @@ node_modules
 
 **/.xatarc
 .env
+.env.local
 .env.*
 # Local Netlify folder
 .netlify
