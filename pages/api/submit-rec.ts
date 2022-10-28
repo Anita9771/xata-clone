@@ -2,7 +2,7 @@ import { NextApiHandler } from "next";
 import { getXataClient } from "../../utils/xata.codegen";
 import fetch from 'node-fetch';
 
-const handler: NextApiHandler = async (req, res) => {
+export const getServerSideProps = async (req, res) => {
   const xata = await getXataClient();
   const { name, email, reason } = req.body;
   await xata.db.viewers.create({
@@ -14,4 +14,4 @@ const handler: NextApiHandler = async (req, res) => {
   //   console.log(record);
 };
 
-export default handler;
+// export default handler;
