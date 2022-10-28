@@ -1,7 +1,10 @@
 import { useState } from "react";
+import dotenv from "dotenv"
 // import bcrypt from "bcrypt";
 // import {promisify} from "util";
 // import fetch from 'node-fetch';
+
+// dotenv.config();
 
 export const TestForm = () => {
   const [name, setName] = useState("");
@@ -13,7 +16,7 @@ export const TestForm = () => {
       method: "POST",
       headers: {
         Authorization: `Bearer 
-          ${process.env.XATA_API_KEY}`,
+          ${process.env.NEXT_PUBLIC_XATA_API_KEY}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
