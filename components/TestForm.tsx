@@ -1,10 +1,11 @@
 import { useState } from "react";
 import dotenv from "dotenv"
+dotenv.config();
 // import bcrypt from "bcrypt";
 // import {promisify} from "util";
 // import fetch from 'node-fetch';
 
-// dotenv.config();
+
 
 export const TestForm = () => {
   const [name, setName] = useState("");

@@ -1,5 +1,7 @@
 import { NextApiHandler } from "next";
 import { XataClient } from "../../utils/xata.codegen";
+import dotenv from "dotenv"
+dotenv.config();
 
 
 const xata = new XataClient({apiKey: process.env.NEXT_PUBLIC_XATA_API_KEY});

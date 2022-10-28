@@ -3,6 +3,8 @@ import { XataClient } from "../utils/xata.codegen";
 import Head from "next/head";
 import homePageStyles from "../styles/homepage.module.css";
 import { TestForm } from "../components/TestForm";
+import dotenv from "dotenv"
+dotenv.config();
 
 export default function IndexPage({
   links,
