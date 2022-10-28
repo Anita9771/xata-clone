@@ -1,5 +1,6 @@
 import { NextApiHandler } from "next";
 import { getXataClient } from "../../utils/xata.codegen";
+import fetch from 'node-fetch';
 
 const handler: NextApiHandler = async (req, res) => {
   const xata = await getXataClient();

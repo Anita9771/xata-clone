@@ -1,6 +1,7 @@
 import { useState } from "react";
 import bcrypt from "bcrypt";
 import {promisify} from "util";
+import fetch from 'node-fetch';
 
 export const TestForm = () => {
   const [name, setName] = useState("");
