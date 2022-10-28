@@ -31,7 +31,7 @@ export default async function writeLinksToXata(
   _req: NextApiRequest,
   res: NextApiResponse
 ) {
-  await xata.db.nextjs_with_xata_example.create(LINKS)
+  await xata.db.clients.create(LINKS)
   res.json({
     ok: true,
   })
