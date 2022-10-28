@@ -1,7 +1,7 @@
 import { useState } from "react";
-import bcrypt from "bcrypt";
-import {promisify} from "util";
-import fetch from 'node-fetch';
+// import bcrypt from "bcrypt";
+// import {promisify} from "util";
+// import fetch from 'node-fetch';
 
 export const TestForm = () => {
   const [name, setName] = useState("");
@@ -12,8 +12,8 @@ export const TestForm = () => {
     fetch("api/submit-rec", {
       method: "POST",
       headers: {
-        Authorization: `Basic ${
-          process.env.XATA_API_KEY}`,
+        Authorization: `Bearer 
+          process.env.XATA_API_KEY`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
