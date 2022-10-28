@@ -13,7 +13,7 @@ export const TestForm = () => {
       method: "POST",
       headers: {
         Authorization: `Bearer 
-          process.env.XATA_API_KEY`,
+          ${process.env.XATA_API_KEY}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
