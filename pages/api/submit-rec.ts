@@ -1,10 +1,10 @@
 import { NextApiHandler } from "next";
 import { XataClient } from "../../utils/xata.codegen";
 import dotenv from "dotenv"
-dotenv.config();
+// dotenv.config();
 
 
-const xata = new XataClient({apiKey: process.env.NEXT_PUBLIC_XATA_API_KEY});
+const xata = new XataClient({apiKey: process.env.XATA_API_KEY});
 
 const handler: NextApiHandler = async (req, res) => {
   const { name, email, reason } = req.body;

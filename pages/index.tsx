@@ -4,7 +4,7 @@ import Head from "next/head";
 import homePageStyles from "../styles/homepage.module.css";
 import { TestForm } from "../components/TestForm";
 import dotenv from "dotenv"
-dotenv.config();
+// dotenv.config();
 
 export default function IndexPage({
   links,
@@ -110,8 +110,10 @@ export default function IndexPage({
   );
 }
 
+console.log(process.env.XATA_API_KEY)
 
-const xata = new XataClient({apiKey: process.env.NEXT_PUBLIC_XATA_API_KEY});
+
+const xata = new XataClient({apiKey: process.env.XATA_API_KEY});
 
 export const getServerSideProps = async () => {
   // const xata = await getXataClient();
