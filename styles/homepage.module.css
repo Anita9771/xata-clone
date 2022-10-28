@@ -1,27 +1,190 @@
-
-.homepage{
-    bottom: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: grey;
+@import url("https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=DotGothic16&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Nabla&family=Poppins&display=swap");
+.homepage {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  /* background-color:  */
 }
 
-.homepage h1{
-    color: whitesmoke;
-    text-transform: uppercase;
-    font-size: 4rem;
+.homepage button{
+    width: 8rem;
+    height: 2.5rem;
+    border-radius: .2rem;
+    font-family: "Poppins", sans-serif;
+    padding: 0.2rem;
+    cursor: pointer;
+    color: white;
 }
 
-.homepage h1 span{
-    font-size: 2rem;
+.homepage h1 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 73px;
+  line-height: 110px;
 }
 
-.homepage h2{
+.homepage p{
+    color: white;
+}
+
+.homepage h1 span {
+  font-size: 2rem;
+  color: #b1343b;
+}
+
+.homepage .logo {
+  position: absolute;
+  top: 1%;
+  left: 8%;
+  font-family: sans-serif;
+  background: linear-gradient(96.66deg, #7f00ff 15.72%, #b1343b 84.11%);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: "Akaya Telivigala", cursive;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 39px;
+}
+
+.homepage .topImages {
+  background-color: #b1343b;
+  padding: 0;
+}
+
+.homepage .topImages img, .homepage .dancingLady img {
+  width: 47rem;
+  height: 45rem;
+  margin: 0;
+}
+
+.homepage .topContent {
+  /* border: 2px solid green; */
+  position: absolute;
+  top: 30%;
+  left: 25%;
+  height: 30%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* width: 80%; */
+}
+.homepage .topContentBtn{
+    position: relative;
+display: flex;
+justify-content: space-between;
+/* align-items: center; */
+text-align: center;
+/* border: 2px solid; */
+width: 40%;
+margin-top: -2rem;
+margin-left: 1.5rem;
+}
+
+.homepage .leftButton{
+    background: #B1343B;
+    border: 2px solid #B1343B;;
+    /* margin-right: 1rem; */
+}
+
+.homepage .rightButton{
+    border: 2px solid white;
+    /* margin-left: 5rem; */
+    background: none;
+}
+
+.homepage .dancingLady{
+    background-color: black;
+    margin: -0.3rem 0 0 0;
+}
+
+.homepage .dancingLady img {
+    width: 45rem;
+    height: 47rem;
+    margin: 0;
+  }
+
+  .homepage .ctaOne{
+    background: linear-gradient(118.39deg, #B1343B 0.52%, #7F00FF 103.35%);
+    color: white;
+    font-family: "Poppins", sans-serif;
     position: absolute;
-            top: 0;
-            left: 5%;
-            font-family: sans-serif;
-            background: linear-gradient(45deg, #cf23cf, red);
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-}
+    right: 0;
+    top: 80rem;
+    width: 50%;
+    padding: 7rem;
+    border-radius: .1rem;
+  }
+
+  .homepage .ctaOne h2, .homepage .ctaTwo h2{
+    margin: 5rem 0 3rem 0;
+  }
+
+  .homepage .womanGlasses img{
+    width: 100%;
+    margin: -0.5rem 0 0 0;
+  }
+
+  .homepage .ctaTwo{
+    background: rgba(177, 52, 59, 0.74);
+    font-family: "Poppins", sans-serif;
+    position: absolute;
+    left: 0;
+    top: 130rem;
+    width: 50%;
+    padding: 9rem 8rem;
+    color: white;
+    border-radius: .1rem;
+  }
+
+  .homepage .guyGlasses{
+    background: black;
+    margin: -0.6rem 0 0 0;
+    text-align: right;
+  }
+
+  .homepage .guyGlasses img{
+    width: 31.5rem;
+    height: 22rem;
+    object-fit: cover;
+  }
+
+  .homepage .testimonials{
+    margin-top: -5rem;
+    background: black;
+    padding-top: 15rem;
+    display: flex;
+  }
+
+  .homepage .testimonialsHead{
+    background: linear-gradient(118.39deg, #B1343B 0.52%, #7F00FF 103.35%);
+    color: white;
+    font-family: "Poppins", sans-serif;
+    padding: 10rem;
+    width: 20%;
+    height: 10rem;
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 90px;
+    /* margin-top: ; */
+  }
+
+  .homepage .testimonial{
+    width: 20%;
+    height: 10rem;
+    border: 2px solid white;
+  }
+
+  .homepage .testimonial img{
+    width: 5rem;
+    height: 5rem;
+  }

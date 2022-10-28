@@ -80,7 +80,7 @@ footer {
   height: clamp(2rem, 5rem, 10vh);
 }
 
-section {
+/* section {
   display: grid;
   place-items: center;
   max-width: 70vw;
@@ -92,9 +92,9 @@ section {
   font-size: 1.2rem;
   text-align: center;
   line-height: 2;
-}
+} */
 
-button {
+/* button {
   background-color: transparent;
   padding: 1rem 2rem;
   border: solid 2px var(--xata-accent);
@@ -104,14 +104,14 @@ button {
   transition: all var(--transition-duration) ease-in-out;
   display: block;
   cursor: pointer;
-}
+} */
 
-button:hover,
+/* button:hover,
 button:focus {
   border-color: transparent;
   color: var(--background-color);
   background-color: var(--xata-accent);
-}
+} */
 
 li button {
   position: absolute;

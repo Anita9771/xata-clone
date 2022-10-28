@@ -1,17 +1,10 @@
 import { useState } from "react";
-import { getXataClient } from "../utils/xata.codegen";
-// require('dotenv').config()
-import * as dotenv from "dotenv";
-import { send } from "process";
-// dotenv.config();
-// import fetch from "node-fetch";
 
 export const TestForm = () => {
   const [name, setName] = useState("");
-  const [description, setDescription] = useState("");
-  const [title, setTitle] = useState("");
-  const [occupation, setOccupation] = useState("");
-
+  const [reason, setReason] = useState("");
+  const [email, setEmail] = useState("");
+  
   const send = () => {
     fetch("api/submit-rec", {
       method: "POST",
@@ -19,10 +12,9 @@ export const TestForm = () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        title: title,
-        description: description,
-        name: name,
-        occupation: occupation,
+        email: email,
+        reason: reason,
+        name: name
       }),
     }).then(() => window.location.reload());
   };
@@ -32,13 +24,13 @@ export const TestForm = () => {
       <form
         onSubmit={(e) => {
           e.preventDefault();
-           console.log(name, description, title, occupation);
+           console.log(name, reason, email);
           send();
           //   console.log(process.env)
         }}
         action=""
       >
-        Used Our Services? Rate us!
+        Need us!
         <input
           type="text"
           name="name"
@@ -48,28 +40,20 @@ export const TestForm = () => {
           placeholder="name"
         />
         <input
-          type="text"
-          name="occupation"
-          value={occupation}
-          onChange={(e) => setOccupation(e.target.value)}
+          type="email"
+          name="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
           required
-          placeholder="occupation"
+          placeholder="email"
         />
         <input
           type="text"
-          name="title"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
+          name="reason"
+          value={reason}
+          onChange={(e) => setReason(e.target.value)}
           required
-          placeholder="recommendation title"
-        />
-        <input
-          type="text"
-          name="description"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-          required
-          placeholder="description"
+          placeholder="reason"
         />
         <button>Submit</button>
       </form>

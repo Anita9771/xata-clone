@@ -15,6 +15,14 @@ const tables = [
       { name: "occupation", type: "string" },
     ],
   },
+  {
+    name: "viewers",
+    columns: [
+      { name: "name", type: "string" },
+      { name: "email", type: "email" },
+      { name: "reason", type: "string" },
+    ],
+  },
 ] as const;
 
 export type SchemaTables = typeof tables;
@@ -22,6 +30,9 @@ export type DatabaseSchema = SchemaInference<SchemaTables>;
 
 export type Clients = DatabaseSchema["clients"];
 export type ClientsRecord = Clients & XataRecord;
+
+export type Viewers = DatabaseSchema["viewers"];
+export type ViewersRecord = Viewers & XataRecord;
 
 const DatabaseClient = buildClient();
 
