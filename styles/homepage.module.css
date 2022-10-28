@@ -17,6 +17,10 @@
     color: white;
 }
 
+.homepage button:hover{
+    font-size: 1rem;
+}
+
 .homepage h1 {
   color: white;
   text-transform: uppercase;

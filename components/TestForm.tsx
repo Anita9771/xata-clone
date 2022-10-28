@@ -9,6 +9,9 @@ export const TestForm = () => {
     fetch("api/submit-rec", {
       method: "POST",
       headers: {
+        Authorization: `Basic ${
+          process.env.XATA_API_KEY
+        }`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
