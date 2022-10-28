@@ -9,6 +9,7 @@
     "xata": "xata codegen"
   },
   "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
     "@types/node": "18.6.5",
     "@types/react": "18.0.17",
     "@types/react-dom": "18.0.6",
@@ -19,6 +20,7 @@
   },
   "dependencies": {
     "@xata.io/client": "^0.16.2",
+    "bcrypt": "^5.1.0",
     "dotenv": "^16.0.3",
     "next": "latest",
     "react": "^18.2.0",

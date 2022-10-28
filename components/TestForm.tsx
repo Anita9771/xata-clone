@@ -1,4 +1,6 @@
 import { useState } from "react";
+import bcrypt from "bcrypt";
+import {promisify} from "util";
 
 export const TestForm = () => {
   const [name, setName] = useState("");
@@ -10,8 +12,7 @@ export const TestForm = () => {
       method: "POST",
       headers: {
         Authorization: `Basic ${
-          process.env.XATA_API_KEY
-        }`,
+          process.env.XATA_API_KEY}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
