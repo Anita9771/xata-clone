@@ -21,7 +21,7 @@ export default function IndexPage({
           name="keywords"
           content="xata, photography, portfolio, cloudinary, next js, hackmamba, jamstack"
         />
-        <link rel="icon" href="../public/camera_icon.png" />
+        <link rel="icon" href="camera-icon.png" />
       </Head>
 
       <div className={homePageStyles.topImages}>
@@ -80,7 +80,7 @@ export default function IndexPage({
         <img src="https://res.cloudinary.com/doy3ks7ls/image/upload/v1666949922/LandingPage/briona-baker-k2_63qVWvBQ-unsplash_1_ccp34u.png" alt="guy in glasses" />
       </div>
 
-      {/* {images.map((image) => {
+      {/* {images?.map((image) => {
         return (
           <div className="images" key={image.id} style={{display: 'flex'}} >
           <img src={image.image} alt={image.title} width="50px" height="50px" />
@@ -118,7 +118,7 @@ console.log(process.env.XATA_API_KEY)
 
 export const getServerSideProps = async () => {
   // const xata = await getXataClient();
-  const xata = new XataClient({apiKey: "xau_uzhMDDgbL6E223PELWfvZjTr5nkVEfvq2"});
+  const xata = new XataClient({apiKey: process.env.XATA_API_KEY});
   const links = await xata.db.clients.getAll();
   const results = await fetch(
     `https://api.cloudinary.com/v1_1/${process.env.CLOUDINARY_CLOUD_NAME}/resources/image`,
