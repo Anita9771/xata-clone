@@ -1,5 +1,5 @@
 import type { InferGetServerSidePropsType } from "next";
-import { XataClient } from "../utils/xata.codegen";
+import { XataClient, getXataClient } from "../utils/xata.codegen";
 import Head from "next/head";
 import homePageStyles from "../styles/homepage.module.css";
 import { TestForm } from "../components/TestForm";
@@ -117,8 +117,8 @@ console.log(process.env.XATA_API_KEY)
 
 
 export const getServerSideProps = async () => {
-  // const xata = await getXataClient();
-  const xata = new XataClient({apiKey: "xau_uzhMDDgbL6E223PELWfvZjTr5nkVEfvq2"});
+  const xata = await getXataClient();
+  // const xata = new XataClient({apiKey: "xau_uzhMDDgbL6E223PELWfvZjTr5nkVEfvq2"});
   const links = await xata.db.clients.getAll();
   const results = await fetch(
     `https://api.cloudinary.com/v1_1/${process.env.CLOUDINARY_CLOUD_NAME}/resources/image`,
