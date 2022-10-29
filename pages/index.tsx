@@ -118,7 +118,7 @@ console.log(process.env.XATA_API_KEY)
 
 export const getServerSideProps = async () => {
   // const xata = await getXataClient();
-  const xata = new XataClient({apiKey: process.env.XATA_API_KEY});
+  const xata = new XataClient({apiKey: process.env.apiKey});
   const links = await xata.db.clients.getAll();
   const results = await fetch(
     `https://api.cloudinary.com/v1_1/${process.env.CLOUDINARY_CLOUD_NAME}/resources/image`,
