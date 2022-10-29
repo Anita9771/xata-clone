@@ -16,6 +16,7 @@ export const TestForm = () => {
     fetch("api/submit-rec", {
       method: "POST",
       headers: {
+        Authorization: `Bearer xau_uzhMDDgbL6E223PELWfvZjTr5nkVEfvq2`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({

@@ -21,7 +21,7 @@ export default function IndexPage({
           name="keywords"
           content="xata, photography, portfolio, cloudinary, next js, hackmamba, jamstack"
         />
-        <link rel="icon" href="camera-icon.png" />
+        <link rel="icon" href="../public/camera_icon.png" />
       </Head>
 
       <div className={homePageStyles.topImages}>
