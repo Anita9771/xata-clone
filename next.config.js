@@ -2,7 +2,7 @@
 
 module.exports = {
   env: {
-    apiKey: NEXT_PUBLIC_XATA_API_KEY,
+    apiKey: "NEXT_PUBLIC_XATA_API_KEY",
   },
     future: {
       webpack5: true, // by default, if you customize webpack config, they switch back to version 4. 
