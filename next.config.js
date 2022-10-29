@@ -9,7 +9,7 @@ module.exports = {
     webpack(config) {
       config.resolve.fallback = {
         ...config.resolve.fallback, 
-        apiKey: XATA_API_KEY,// if you miss it, all the other options in fallback, specified
+        apiKey: "xau_uzhMDDgbL6E223PELWfvZjTr5nkVEfvq2",// if you miss it, all the other options in fallback, specified
           // by next.js will be dropped. Doesn't make much sense, but how it is
         fs: false, // the solution
       };
