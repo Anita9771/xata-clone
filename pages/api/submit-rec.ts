@@ -1,7 +1,7 @@
 import { NextApiHandler } from "next";
 import { XataClient, getXataClient } from "../../utils/xata.codegen";
 import dotenv from "dotenv"
-// dotenv.config();
+dotenv.config();
 
 
 
