@@ -135,7 +135,7 @@ export const getServerSideProps = async () => {
 
   const { resources } = results;
 
-  const images = resources.map((resource: { asset_id?: any; public_id?: any; secure_url?: any; width?: any; height?: any; }) => {
+  const images = resources?.map((resource) => {
     const { width, height } = resource;
     return {
       id: resource.asset_id,
