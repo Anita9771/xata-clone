@@ -111,7 +111,7 @@ export default function IndexPage({
   );
 }
 
-// console.log(process.env.apiKey)
+console.log(process.env.apiKey)
 
 
 
