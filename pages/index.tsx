@@ -4,7 +4,7 @@ import Head from "next/head";
 import homePageStyles from "../styles/homepage.module.css";
 import { TestForm } from "../components/TestForm";
 import dotenv from "dotenv"
-dotenv.config();
+// dotenv.config();
 // const fs = require('fs')
 
 export default function IndexPage({
