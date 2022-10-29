@@ -8,7 +8,7 @@ dotenv.config();
 
 const handler: NextApiHandler = async (req, res) => {
   // const xata = await getXataClient();
-  const xata = new XataClient({apiKey: process.env.NEXT_PUBLIC_XATA_API_KEY});
+  const xata = new XataClient({apiKey: process.env.apiKey});
   const { name, email, reason } = req.body;
   await xata.db.viewers.create({
     name,
