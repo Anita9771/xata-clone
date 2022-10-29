@@ -2,7 +2,7 @@
 
 module.exports = {
   env: {
-    apiKey: "xau_uzhMDDgbL6E223PELWfvZjTr5nkVEfvq2",
+    // apiKey: "xau_uzhMDDgbL6E223PELWfvZjTr5nkVEfvq2",
   },
     future: {
       webpack5: true, // by default, if you customize webpack config, they switch back to version 4. 

@@ -111,14 +111,14 @@ export default function IndexPage({
   );
 }
 
-console.log(process.env.XATA_API_KEY)
+console.log(process.env.apiKey)
 
 
 
 
 export const getServerSideProps = async () => {
   // const xata = await getXataClient();
-  const xata = new XataClient({apiKey: process.env.apiKey});
+  const xata = new XataClient({apiKey: process.env.NEXT_PUBLIC_XATA_API_KEY});
   const links = await xata.db.clients.getAll();
   const results = await fetch(
     `https://api.cloudinary.com/v1_1/${process.env.CLOUDINARY_CLOUD_NAME}/resources/image`,
