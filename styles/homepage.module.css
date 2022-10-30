@@ -63,7 +63,8 @@
 
 .homepage .topImages img, .homepage .dancingLady img {
   width: 47rem;
-  height: 45rem;
+  height: 100vh;
+  object-fit: cover;
   margin: 0;
 }
 

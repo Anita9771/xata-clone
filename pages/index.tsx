@@ -80,13 +80,13 @@ export default function IndexPage({
         <img src="https://res.cloudinary.com/doy3ks7ls/image/upload/v1666949922/LandingPage/briona-baker-k2_63qVWvBQ-unsplash_1_ccp34u.png" alt="guy in glasses" />
       </div>
 
-      {/* {images?.map((image) => {
+      {images?.map((image) => {
         return (
           <div className="images" key={image.id} style={{display: 'flex'}} >
           <img src={image.image} alt={image.title} width="50px" height="50px" />
           </div>
         );
-      })} */}
+      })}
 
       <div className={homePageStyles.testimonials}>
         <div className={homePageStyles.testimonialsHead}>
