@@ -1,28 +1,28 @@
 import { useState } from "react";
-import dotenv from "dotenv"
+import dotenv from "dotenv";
 // dotenv.config();
 // import bcrypt from "bcrypt";
 // import {promisify} from "util";
 // import fetch from 'node-fetch';
 
-
-
 export const TestForm = () => {
   const [name, setName] = useState("");
   const [reason, setReason] = useState("");
   const [email, setEmail] = useState("");
-  
+
   const send = () => {
     fetch("api/submit-rec", {
       method: "POST",
       headers: {
-        // Authorization: `Bearer xau_uzhMDDgbL6E223PELWfvZjTr5nkVEfvq2`,
+        Authorization: `Basic ${Buffer.from(process.env.apiKey).toString(
+          "base64"
+        )}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
         email: email,
         reason: reason,
-        name: name
+        name: name,
       }),
     }).then(() => window.location.reload());
   };
@@ -32,7 +32,7 @@ export const TestForm = () => {
       <form
         onSubmit={(e) => {
           e.preventDefault();
-           console.log(name, reason, email);
+          console.log(name, reason, email);
           send();
           //   console.log(process.env)
         }}
