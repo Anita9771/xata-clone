@@ -1,6 +1,9 @@
 module.exports = {
   env: {
     apiKey: "xau_uzhMDDgbL6E223PELWfvZjTr5nkVEfvq2",
+    CLOUDINARY_CLOUD_NAME: "doy3ks7ls",
+    CLOUDINARY_API_KEY: "656428741614364",
+    CLOUDINARY_API_SECRET: "Qkkt2R8CgQDfD2vtIJ3hf6uzCCM"
   },
     future: {
       webpack5: true, // by default, if you customize webpack config, they switch back to version 4. 
