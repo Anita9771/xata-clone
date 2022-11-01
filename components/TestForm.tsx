@@ -1,5 +1,6 @@
 import { useState } from "react";
 import dotenv from "dotenv";
+import '../styles/test-form.module.css'
 // dotenv.config();
 // import bcrypt from "bcrypt";
 // import {promisify} from "util";
@@ -28,7 +29,7 @@ export const TestForm = () => {
   };
 
   return (
-    <div className="">
+    <div className="" >
       <form
         onSubmit={(e) => {
           e.preventDefault();
@@ -38,14 +39,14 @@ export const TestForm = () => {
         }}
         action=""
       >
-        Need us!
+        <p>Need us!</p>
         <input
           type="text"
           name="name"
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
-          placeholder="name"
+          placeholder="Name"
         />
         <input
           type="email"
@@ -53,7 +54,7 @@ export const TestForm = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          placeholder="email"
+          placeholder="Email"
         />
         <input
           type="text"
@@ -61,9 +62,9 @@ export const TestForm = () => {
           value={reason}
           onChange={(e) => setReason(e.target.value)}
           required
-          placeholder="reason"
+          placeholder="Reason"
         />
-        <button>Submit</button>
+        <button>SEND</button>
       </form>
     </div>
   );

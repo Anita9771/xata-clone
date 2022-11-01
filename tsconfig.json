@@ -16,6 +16,6 @@
     "jsx": "preserve",
     "composite": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/cloudinary.ts"],
   "exclude": ["node_modules"]
 }

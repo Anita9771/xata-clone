@@ -56,6 +56,7 @@ export default function App({ Component, pageProps }: AppProps) {
           media="(prefers-color-scheme: light)"
         />
       </Head>
+      <h2 className='logo'>MODE-EL</h2>
       <Component {...pageProps} />
     </>
   )

@@ -14,6 +14,7 @@ const tables = [
       { name: "description", type: "string" },
       { name: "name", type: "string" },
       { name: "occupation", type: "string" },
+      { name: "image", type: "string" },
     ],
   },
   {
