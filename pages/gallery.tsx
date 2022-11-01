@@ -1,7 +1,5 @@
 import type { InferGetServerSidePropsType } from "next";
 import Head from "next/head";
-import galleryStyles from "../styles/gallery.module.css";
-import homePageStyles from "../styles/homepage.module.css";
 import dotenv from "dotenv"
 import Link from "next/link";
 dotenv.config();
