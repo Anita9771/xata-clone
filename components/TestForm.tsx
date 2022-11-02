@@ -61,7 +61,7 @@ export const TestForm = () => {
           value={reason}
           onChange={(e) => setReason(e.target.value)}
           required
-          placeholder="Reason"
+          placeholder="Message"
         />
         <button>SEND</button>
       </form>
