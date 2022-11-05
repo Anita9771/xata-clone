@@ -1,14 +1,11 @@
 import { NextApiHandler } from "next";
 import { XataClient, getXataClient } from "../../utils/xata.codegen";
-import dotenv from "dotenv"
+import dotenv from "dotenv";
 dotenv.config();
 
-
-
-
+// connecting to xata
 const handler: NextApiHandler = async (req, res) => {
-  // const xata = await getXataClient();
-  const xata = new XataClient({apiKey: process.env.apiKey});
+  const xata = new XataClient({ apiKey: process.env.apiKey });
   const { name, email, reason } = req.body;
   await xata.db.viewers.create({
     name,
@@ -16,7 +13,6 @@ const handler: NextApiHandler = async (req, res) => {
     reason,
   });
   res.end();
-  //   console.log(record);
 };
 
 export default handler;

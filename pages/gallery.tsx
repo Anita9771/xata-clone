@@ -1,30 +1,16 @@
 import type { InferGetServerSidePropsType } from "next";
 import Head from "next/head";
-import dotenv from "dotenv"
+import dotenv from "dotenv";
 import Link from "next/link";
 dotenv.config();
 
 export default function gallery({
-  images
+  images,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
 
-
-  // async function handleLoadMore() {
-   
-  //   const results = await fetch('api/search', {
-  //     method: 'POST',
-  //     body: JSON.stringify({
-  //       nextCursor
-  //     })
-  //   }).then(res => res.json())
-    
-  //   const { resources, next_cursor: updatedNextCursor} = results;
-  //   const images = mapImageResources(resources);
-  // }
-
-
+  // Some UI rendering
   return (
-    <div className='gallery'>
+    <div className="gallery">
       <Head>
         <title>Mode-el</title>
         <meta
@@ -34,31 +20,27 @@ export default function gallery({
         <link rel="icon" href="camera-icon.png" />
       </Head>
 
-      {/* <h2 className={homePageStyles.logo}>MODE-EL</h2> */}
-{/* 
-      <h1>
-        GALLERY
-      </h1> */}
-<div className='images'>
-{images?.map((image) => {
-        return (
-          <div key={image.id} >
-          <img src={image.image} alt={image.title}/>
-          </div>
-        );
-      })} 
-</div>
+      {/* Looping through cloudinary images */}
+      <div className="images">
+        {images?.map((image) => {
+          return (
+            <div key={image.id}>
+              <img src={image.image} alt={image.title} />
+            </div>
+          );
+        })}
+      </div>
 
       <nav>
-      <Link className='link' href="/">HOME</Link>
-      {/* <button onClick={handleLoadMore} >VIEW MORE</button> */}
+        <Link className="link" href="/">
+          HOME
+        </Link>
       </nav>
     </div>
   );
 }
 
-
-
+// Calling cloudinary API
 export const getServerSideProps = async () => {
   const results = await fetch(
     `https://api.cloudinary.com/v1_1/${process.env.CLOUDINARY_CLOUD_NAME}/resources/image`,

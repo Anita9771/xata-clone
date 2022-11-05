@@ -5,16 +5,17 @@ import { TestForm } from "../components/TestForm";
 import dotenv from "dotenv";
 import Link from "next/link";
 dotenv.config();
-// const fs = require('fs')
 
 export default function IndexPage({
   links,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
-  // console.log('images', images)
 
+
+
+  
+  // scroll to top
   const onBtnClick = (e) => {
     e.preventDefault();
-    // const goto = e.target.getAttribute('goto');
     setTimeout(() => {
       window.scrollTo({
         top: document.getElementById("contact").offsetTop - 60,
@@ -23,9 +24,10 @@ export default function IndexPage({
     }, 50);
   };
 
+  // scroll to top
   const onIconClick = (e) => {
     e.preventDefault();
-    // const goto = e.target.getAttribute('goto');
+   
     setTimeout(() => {
       window.scrollTo({
         top: document.getElementById("contactBtn").offsetTop - 60,
@@ -34,6 +36,7 @@ export default function IndexPage({
     }, 50);
   };
 
+  // Some UI rendering
   return (
     <div className="homepage">
       <Head>
@@ -47,7 +50,7 @@ export default function IndexPage({
           href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
           rel="stylesheet"
         ></link>
-        {/* <link rel="stylesheet" href="../styles/homepage.module.css" /> */}
+        
       </Head>
 
       <div className='top-images'>
@@ -61,7 +64,7 @@ export default function IndexPage({
         />
       </div>
 
-      {/* <h2 className=logo}>MODE-EL</h2> */}
+      
 
       <div className='top-content'>
         <h1>
@@ -117,14 +120,6 @@ export default function IndexPage({
         />
       </div>
 
-      {/* {images?.map((image) => {
-        return (
-          <div className="images" key={image.id} style={{display: 'flex'}} >
-          <img src={image.image} alt={image.title} width="50px" height="50px" />
-          </div>
-        );
-      })} */}
-
       <div className='testimonials'>
         <div className='testimonials-head'>
           <h2>TESTIMONIALS</h2>
@@ -136,7 +131,6 @@ export default function IndexPage({
                 <img src={link.image} alt="testimonial image" />
                 <p><b>{link.name}</b></p>
                 <p>{link.occupation}</p>
-                {/* <p>{link.title}</p> */}
                 <p>{link.description}</p>
               </section>
             );
@@ -161,10 +155,8 @@ export default function IndexPage({
   );
 }
 
-// console.log(process.env.apiKey)
-
+// fetching db from xata
 export const getServerSideProps = async () => {
-  // const xata = await getXataClient();
   const xata = new XataClient({ apiKey: process.env.apiKey });
   const links = await xata.db.clients.getAll();
 

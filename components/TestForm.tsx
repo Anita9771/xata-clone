@@ -1,15 +1,12 @@
 import { useState } from "react";
 import dotenv from "dotenv";
-// dotenv.config();
-// import bcrypt from "bcrypt";
-// import {promisify} from "util";
-// import fetch from 'node-fetch';
 
 export const TestForm = () => {
   const [name, setName] = useState("");
   const [reason, setReason] = useState("");
   const [email, setEmail] = useState("");
 
+  // fetch xata API
   const send = () => {
     fetch("api/submit-rec", {
       method: "POST",
@@ -28,15 +25,14 @@ export const TestForm = () => {
   };
 
   return (
-    <div className="" >
+    // form to submit details
+    <div className="">
       <form
         onSubmit={(e) => {
           e.preventDefault();
           console.log(name, reason, email);
           send();
-          //   console.log(process.env)
         }}
-        action=""
       >
         <p>Need us!</p>
         <input
