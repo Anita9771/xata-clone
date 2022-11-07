@@ -7,6 +7,7 @@ import Link from "next/link";
 dotenv.config();
 
 export default function IndexPage({
+  // add the props in this case links
   links,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
 
@@ -50,7 +51,6 @@ export default function IndexPage({
           href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
           rel="stylesheet"
         ></link>
-        
       </Head>
 
       <div className='top-images'>

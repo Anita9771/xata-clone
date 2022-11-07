@@ -11,9 +11,7 @@ export const TestForm = () => {
     fetch("api/submit-rec", {
       method: "POST",
       headers: {
-        Authorization: `Basic ${Buffer.from(process.env.apiKey).toString(
-          "base64"
-        )}`,
+        Authorization: `Basic ${process.env.apiKey}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
