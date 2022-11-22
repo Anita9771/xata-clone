@@ -14,6 +14,7 @@ const tables = [
       { name: "description", type: "string" },
       { name: "name", type: "string" },
       { name: "occupation", type: "string" },
+      { name: "image", type: "string" },
     ],
   },
   {
@@ -43,7 +44,7 @@ export type DatabaseSchema = {
 const DatabaseClient = buildClient();
 
 const defaultOptions = {
-  databaseURL: "https://annietah-70hp76.xata.sh/db/with-xata-app",
+  databaseURL: "https://annietah-70hp76.eu-west-1.xata.sh/db/with-xata-app",
 };
 
 export class XataClient extends DatabaseClient<DatabaseSchema> {
